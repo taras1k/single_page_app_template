@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,21 +25,11 @@
           <div class="masthead clearfix">
             <div class="inner">
               <h3 class="masthead-brand">Cover</h3>
-              <nav>
-                <ul class="nav masthead-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Contact</a></li>
-                </ul>
+              <nav ui-view="header">
               </nav>
             </div>
           </div>
-          <div class="inner cover">
-            <h1 class="cover-heading">Cover your page.</h1>
-            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-            <p class="lead">
-              <a href="#" class="btn btn-lg btn-default">Learn more</a>
-            </p>
+          <div class="inner cover" ui-view="main">
           </div>
           <div class="mastfoot">
             <div class="inner">
@@ -52,6 +42,11 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="static/components/jquery/dist/jquery.min.js"></script>
     <script src="static/components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="static/components/angular/angular.min.js"></script>
+    <script src="static/components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="static/js/app.js"></script>
+    <script src="static/js/states.js"></script>
+    <script src="static/js/controllers.js"></script>
   </body>
 </html>
 
